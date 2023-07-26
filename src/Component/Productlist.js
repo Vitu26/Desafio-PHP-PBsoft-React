@@ -39,12 +39,12 @@ function Productlist()
                                 <thead>
                                 <tr>
                                 <th scope="col">Sr.No</th>
-                                <th scope="col">Product Title</th>
-                                <th scope="col">Product Quanty</th>
-                                <th scope="col">Product Description</th>
-                                <th scope="col">Product Category</th>
-                                <th scope="col">Product Value</th>
-                                <th scope="col" width="200">Action</th>
+                                <th scope="col">Nome do produto</th>
+                                <th scope="col">Quantidade</th>
+                                <th scope="col">Descrição</th>
+                                <th scope="col">Categoria</th>
+                                <th scope="col">Preço</th>
+                                <th scope="col" width="200">Ações</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -59,8 +59,8 @@ function Productlist()
                                             <td>{pdata.value } </td>
                                             
                                             <td>
-                                                <Link to={`/editproduct/${pdata.id}/edit`} className="btn btn-success mx-2">Edit</Link>
-                                                <button onClick={() => deleteProduct(pdata.id)} className="btn btn-danger">Delete</button>
+                                                <Link to={`/editproduct/${pdata.id}/edit`} className="btn btn-success mx-2">Editar</Link>
+                                                <button onClick={() => deleteProduct(pdata.id)} className="btn btn-danger">Deletar</button>
                                             </td>
                                             </tr>
                                         ))

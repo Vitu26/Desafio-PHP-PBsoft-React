@@ -91,7 +91,7 @@ function Addproduct()
                         <label  className="col-sm-3">Preço: R$ </label>
                     <div className="col-sm-9">
                         
-                        <input type="number" className="form-control" onChange={(e)=>setvalue(e.target.value)}  />
+                        <input type="number" pattern="[0-9]+([,\.][0-9]+)?" className="form-control" onChange={(e)=>setvalue(e.target.value)}  />
                     </div>
                     </div>
  
