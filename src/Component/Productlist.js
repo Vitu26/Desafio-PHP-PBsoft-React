@@ -22,7 +22,7 @@ function Productlist()
   
    
     const deleteProduct = (id) => {
-        axios.delete('https://api-rest.maxima.inf.br/api/product/'+id).then(function(response){
+        axios.delete('https://api-rest.maxima.inf.br/api/products/'+id).then(function(response){
             console.log(response.data);
             alert("Successfully Deleted");
         });
