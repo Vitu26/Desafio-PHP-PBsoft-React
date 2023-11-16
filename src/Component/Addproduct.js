@@ -23,7 +23,7 @@ function Addproduct()
         formData.append('category',txtcategory);
         formData.append('value',txtvalue);
 
-        const responce= await axios.post("http://127.0.0.1:8000/api/products", formData, {
+        const responce= await axios.post("https://api-rest.maxima.inf.br/api/products", formData, {
             headers:{'Content-Type':"multipart/form-data"},
         } );
  

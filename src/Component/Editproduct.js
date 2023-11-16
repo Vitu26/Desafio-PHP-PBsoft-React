@@ -28,7 +28,7 @@ function EditProduct()
         formData.append('description',inputs.description);
         formData.append('category',inputs.category);
         formData.append('value',inputs.value);
-        const response= await axios.post("http://127.0.0.1:8000/api/update/"+id, formData, {
+        const response= await axios.post("https://api-rest.maxima.inf.br/api/products/"+id, formData, {
             headers:{'Content-Type':"multipart/form-data"},
         } );
         setMessage(response.data.message); //"message": "Product successfully updated.."
@@ -49,7 +49,7 @@ function EditProduct()
     }, []);
    
     function getproduct() {
-        axios.get('http://127.0.0.1:8000/api/products/'+id).then(function(response) {
+        axios.get('https://api-rest.maxima.inf.br/api/products/'+id).then(function(response) {
             console.log(response);
             setInputs(response.data.product);
         });

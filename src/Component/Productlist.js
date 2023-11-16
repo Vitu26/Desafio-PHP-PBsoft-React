@@ -9,7 +9,7 @@ function Productlist()
      
     useEffect( ()=>{
         const getProduct= ()=>{
-            fetch("http://127.0.0.1:8000/api/products")
+            fetch("https://api-rest.maxima.inf.br/api/products")
             .then(res=>{ return res.json()})
             .then(response=>{ 
                 console.log(response.products)
@@ -22,7 +22,7 @@ function Productlist()
   
    
     const deleteProduct = (id) => {
-        axios.delete('http://127.0.0.1:8000/api/delete/'+id).then(function(response){
+        axios.delete('https://api-rest.maxima.inf.br/api/product/'+id).then(function(response){
             console.log(response.data);
             alert("Successfully Deleted");
         });
